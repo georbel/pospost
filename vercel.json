@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "config/wsgi.py": {
+      "includeFiles": [
+        "templates/**",
+        "staticfiles/**",
+        "pos/migrations/**",
+        "pos/templatetags/**"
+      ]
+    }
+  },
+  "buildCommand": "python manage.py collectstatic --noinput"
+}
